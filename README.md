@@ -25,7 +25,7 @@ A modern, intuitive note-taking application built with PHP and MySQL. Create, or
 
 1. Clone the repository:
 ```bash
-git clone 
+git clone https://github.com/TechyCSR/Notes-Making-Web-App/
 cd NotesApp
 ```
 
