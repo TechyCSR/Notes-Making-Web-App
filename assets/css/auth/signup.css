@@ -1,0 +1,148 @@
+/* Signup Page Specific Styles */
+.signup-logo {
+    animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Enhanced signup form */
+.signup-form .form-group {
+    margin-bottom: 1.6rem;
+}
+
+.signup-form .input-group input {
+    border-width: 2px;
+}
+
+[data-theme="light"] .signup-form .input-group input {
+    border-color: rgba(0, 0, 0, 0.3);
+    color: #222;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Enhanced signup button */
+.signup-form .btn-primary {
+    height: 3.5rem;
+    margin: 2rem 0 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Enhanced button animation */
+.signup-form .btn-primary::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.2) 25%, 
+        rgba(255, 255, 255, 0.2) 75%, 
+        rgba(255, 255, 255, 0) 100%);
+    transition: transform 1s ease;
+    transform: translateX(-100%);
+}
+
+.signup-form .btn-primary:hover::after {
+    transform: translateX(50%);
+}
+
+/* Password visibility toggle */
+[data-theme="light"] .signup-form .password-toggle {
+    color: #444;
+}
+
+/* Password strength indicator */
+.signup-form .password-strength {
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+.signup-form .password-strength.active {
+    opacity: 1;
+    max-height: 50px;
+    margin-top: 0.6rem;
+}
+
+/* Password requirements */
+.signup-form .password-requirements {
+    margin-top: 0.75rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+[data-theme="light"] .signup-form .password-requirements {
+    color: #444;
+}
+
+/* Improved signin link */
+.signup-form .auth-footer a {
+    position: relative;
+    font-weight: 700;
+    padding: 0 2px;
+}
+
+.signup-form .auth-footer a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--auth-primary-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.signup-form .auth-footer a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Animation for form elements */
+.signup-form .form-group {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: formFadeIn 0.5s forwards;
+}
+
+.signup-form .form-group:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.signup-form .form-group:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.signup-form .form-group:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.signup-form .form-group:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes formFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

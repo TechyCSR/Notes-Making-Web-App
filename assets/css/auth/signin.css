@@ -1,0 +1,116 @@
+/* Signin Page Specific Styles */
+.signin-logo {
+    animation: logoSpin 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+@keyframes logoSpin {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+/* Enhanced signin form */
+.signin-form .form-group {
+    margin-bottom: 1.8rem;
+}
+
+.signin-form .input-group input {
+    border-width: 2px;
+}
+
+[data-theme="light"] .signin-form .input-group input {
+    border-color: rgba(0, 0, 0, 0.3);
+    color: #333;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Enhanced signin button */
+.signin-form .btn-primary {
+    margin: 2rem 0 1rem;
+    height: 3.5rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Enhanced button animation */
+.signin-form .btn-primary::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.2) 50%, 
+        rgba(255, 255, 255, 0) 100%);
+    transform: translateX(-100%);
+    transition: transform 0.8s;
+}
+
+.signin-form .btn-primary:hover::after {
+    transform: translateX(100%);
+}
+
+/* Improved checkbox for light theme */
+[data-theme="light"] .signin-form .checkbox-custom {
+    border-color: rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+
+[data-theme="light"] .signin-form .checkbox-text {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Enhanced forgot password link */
+.signin-form .forgot-password {
+    position: relative;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.signin-form .forgot-password::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: var(--auth-primary-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.signin-form .forgot-password:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Improved signup link */
+.signin-form .auth-footer a {
+    position: relative;
+    font-weight: 700;
+    padding: 0 2px;
+}
+
+.signin-form .auth-footer a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--auth-primary-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.signin-form .auth-footer a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+} 

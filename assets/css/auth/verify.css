@@ -1,0 +1,144 @@
+/* Verify OTP Page Specific Styles */
+.verify-logo {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Enhanced verify form */
+.verify-form .form-group {
+    margin-bottom: 1.6rem;
+}
+
+/* OTP Input Container */
+.verify-form .otp-container {
+    margin: 2.5rem 0;
+}
+
+[data-theme="light"] .verify-form .otp-input {
+    border-color: rgba(0, 0, 0, 0.3);
+    color: #4a90e2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+}
+
+/* Enhanced OTP animation for when digits are entered */
+.verify-form .otp-input.has-value {
+    animation: pulse-light 1.5s infinite;
+}
+
+@keyframes pulse-light {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4); }
+    50% { box-shadow: 0 0 0 10px rgba(74, 144, 226, 0); }
+}
+
+/* Improved verify button */
+.verify-form .btn-primary {
+    height: 3.5rem;
+    margin: 2rem 0 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Enhanced button ready state */
+.verify-form .btn-primary.ready {
+    animation: readyPulse 1.5s infinite;
+    background: linear-gradient(135deg, #4a90e2 0%, #2b68b1 100%);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.5);
+}
+
+@keyframes readyPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03) translateY(-2px); }
+}
+
+/* Attempts remaining counter */
+.verify-form .attempts-remaining {
+    margin: 0.75rem 0;
+    font-weight: 500;
+}
+
+[data-theme="light"] .verify-form .attempts-remaining {
+    color: #444;
+}
+
+/* Rate limit message */
+.verify-form .rate-limit-message {
+    margin: 1.5rem 0;
+    font-weight: 600;
+}
+
+/* Verification info section */
+.verify-form .verification-info {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--auth-border-color);
+}
+
+.verify-form .verify-info-item {
+    margin-bottom: 0.85rem;
+}
+
+[data-theme="light"] .verify-form .verify-info-item {
+    color: #444;
+}
+
+[data-theme="light"] .verify-form .verify-info-item i {
+    color: #4a90e2;
+}
+
+/* Improved resend link */
+.verify-form .resend-link {
+    color: var(--auth-primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    padding: 0 2px;
+    transition: all 0.3s ease;
+}
+
+.verify-form .resend-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--auth-primary-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.verify-form .resend-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.verify-form .resend-link:hover {
+    color: var(--auth-secondary-color);
+}
+
+/* OTP digit animation */
+.verify-form .otp-input {
+    caret-color: var(--auth-primary-color);
+    transition: all 0.3s ease;
+}
+
+.verify-form .otp-input:focus {
+    transform: translateY(-5px) translateZ(10px);
+}
+
+/* Timer styling */
+.verify-form .timer {
+    font-weight: 600;
+    color: var(--auth-primary-color);
+}
+
+[data-theme="light"] .verify-form .timer {
+    color: #3a7ec2;
+} 
