@@ -5,7 +5,7 @@ A modern, intuitive note-taking application built with PHP and MySQL. Create, or
 ## ✨ Features
 
 - **Secure Authentication** - Sign up, login, password reset functionality
-- **Public Sharing** - Share your thoughts through notes anytime and anywhere.
+- **Public Sharing** - Share your thoughts through your notes anytime and anywhere.
 - **Note Management** - Create, edit, delete, and organize your notes
 - **Rich Text Editor** - Format your notes with a powerful WYSIWYG editor
 - **Note Sharing** - Share notes publicly with anyone via secure links
