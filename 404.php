@@ -9,8 +9,8 @@ require_once 'config/config.php';
     <title>404 - Page Not Found | <?php echo APP_NAME; ?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/auth/common.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/auth/common.css">
     <style>
         /* Modern 3D Effects and Animation */
         .error-container {
@@ -405,7 +405,7 @@ require_once 'config/config.php';
                 <div class="error-code">404</div>
                 <h2 class="error-message">Page Not Found</h2>
                 <p class="error-subtitle">The page you're looking for doesn't exist or has been moved to another location.</p>
-                <a href="index.php" class="back-home">
+                <a href="/index.php" class="back-home">
                     <span>
                         <i class="fas fa-home"></i>
                         Return to Home
