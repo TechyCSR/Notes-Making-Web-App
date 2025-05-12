@@ -16,7 +16,7 @@ if ($is_production) {
 } else {
     // Local Development
     define('DB_HOST', 'localhost');
-    define('DB_NAME', 'notesapp');
+    define('DB_NAME', 'notes_app');
     define('DB_USER', 'root');
     define('DB_PASS', '');
 }
@@ -65,4 +65,6 @@ header('X-XSS-Protection: 1; mode=block');
 if ($is_production) {
     header('Strict-Transport-Security: max-age=31536000; includeSubDomains');
 }
+
+// ... existing code ...
 ?> 

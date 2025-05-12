@@ -7,6 +7,10 @@ class Database {
     public function __construct() {
         try {
             $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME;
+            // If using XAMPP and localhost, add the socket
+            if (DB_HOST === 'localhost') {
+                $dsn .= ";unix_socket=/opt/lampp/var/mysql/mysql.sock";
+            }
             $this->conn = new PDO(
                 $dsn,
                 DB_USER,
