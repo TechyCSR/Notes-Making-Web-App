@@ -13,11 +13,13 @@ A modern, intuitive note-taking application built with PHP and MySQL. Create, or
 - **Responsive Design** - Works perfectly on desktop and mobile devices
 - **Dark/Light Mode** - Choose your preferred visual theme
 
+
+
 ##  Quick Start
 
 ### Prerequisites
-- PHP 7.4+
-- MySQL 5.7+
+- PHP 7.1+
+- MySQL 5.8+
 - Apache/XAMPP/WAMP server
 - Composer
 
