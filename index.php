@@ -412,7 +412,7 @@ session_start();
     <footer class="footer-3d">
         <div class="footer-container">
             <div class="footer-creator">
-                Made with <i class="fas fa-heart"></i> by <a href="https://techycsr.me" target="_blank" class="creator-link">@TechyCSR</a>
+                Made with <i class="fas fa-heart"></i> by <a href="https://techycsr.dev" target="_blank" class="creator-link">@TechyCSR</a>
             </div>
         </div>
     </footer>
