@@ -90,7 +90,7 @@ NotesApp/
 
 ## 👥 Contributors
 
-- [@TechyCSR](https://techycsr.me)
+- [@TechyCSR](https://techycsr.dev)
 - [@nileXrana](https://github.com/nileXrana)
 
 ## 📄 License
